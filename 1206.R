@@ -13,3 +13,7 @@ end.TITLE.pos = start.TITLE.pos + attr(TITLE.pos[[1]], "match.length")[1] - 1
 TITLE.word = substr(txt_new, start.TITLE.pos, end.TITLE.pos)
 
 TITLE.word
+
+TITLE.word = gsub("<title>", "", TITLE.word)
+TITLE.word = gsub("</title>", "", TITLE.word)
+TITLE.word
